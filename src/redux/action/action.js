@@ -11,3 +11,9 @@ export const decrement = () => {
         type: ActionTypes.DECREMENT
     };
 };
+
+// export const decrements = () => {
+//     return {
+//         type: ActionTypes.DECREMENT
+//     };
+// };
