@@ -7,6 +7,8 @@ export default (state = 0, action) => {
             return state + 1;
         case ActionTypes.DECREMENT:
             return state - 1;
+        case 'INCREMENT_ASYNC':
+            return state    
         default:
             return state;
     }

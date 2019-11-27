@@ -18,14 +18,16 @@ import * as Action from "./action/action";
 import { connect } from "react-redux";
 
 const App = (props) => {
-    console.log(props)
-    const { increment, decrement } = props;
+    const { increment, decrement,asyncincrement,asyncdecrement } = props;
     return (
         <div className="container">
+            <h1 className="text-center mt-5">redux+redux-saga</h1>
             <h1 className="text-center mt-5">{props.text}{props.count}</h1>
             <p className="text-center">
+                <button onClick={()=>asyncincrement()}>延迟1秒增加</button>
                 <button className="btn btn-primary mr-2" onClick={() => increment()}> 增加</button>
                 <button className="btn btn-danger my-2" onClick={() => decrement()}> 减少</button>
+                <button onClick={()=>{asyncdecrement()}}>延迟1秒减少</button>
             </p>
         </div>
     );
